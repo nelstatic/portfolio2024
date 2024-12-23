@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  /* outline: solid 1px green; */
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  --blue-color: #23529a;
+  --grey-color: #f2f2f2;
+  --blizzard-color: #deebff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*************************************************************************/
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+}
+
+nav .logo {
+  width: 80px;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 3% 4%;
+  border-top: solid transparent 2px;
+}
+nav ul li:hover {
+  border-top: solid var(--blue-color) 2px;
+  transition: 0.3s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 23px 0;
+}
+
+/********************************************************************************************************************************************************/
+
+.one {
+  padding: 3% 0;
+}
+.one h1 {
+  margin: 10px 0;
+}
+.one p {
+  padding-bottom: 10px;
+}
+
+.one form {
+  padding: 15px 0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.one form a {
+  font-weight: bold;
+  background: var(--blue-color);
+  color: white;
+  padding: 10px 14px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+/********************************************************************************************************************************************************/
+
+/********************************************************************************************************************************************************/
+
+.three {
+  padding: 4.5% 0;
+}
+.three .activites .content h3 {
+  font-size: 22px;
+}
+.three .activites .content .row {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.three .activites .content .row .card {
+  margin: 0 5px;
+  background: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  /* max-width: fit-content; */
+  width: 300px;
+}
+.three .activites .content .row .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.three .activites .content .row .card h4 {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 18px 20px;
+}
+
+/* Styles du dialog */
+.dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.dialog img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.dialog p {
+  margin: 1rem 0;
+}
+
+.dialog a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #03a9f4;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.dialog a:hover {
+  background-color: #0288d1;
+}
+
+.dialog .close-dialog {
+  margin-top: 1rem;
+  background: #ccc;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/********************************************************************************************************************************************************/
+
+footer {
+  background: var(--grey-color);
+  padding-bottom: 3%;
+}
+footer .content {
+  padding: 25px 55px;
+  max-width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .rubrique {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .rubrique h3 {
+  font-size: 18px;
+  padding: 15px 5px;
+}
+footer .content .rubrique a {
+  font-size: 16px;
+  padding: 5px;
+}
+
+/********************************************************************************************************************************************************/
+
+@media (max-width: 992px) {
+  .three .activites .content .row .card {
+    margin: 0 20px;
+  }
+  .three .activites .content .row .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .three .activites .content .row .card h4 {
+    padding: 10px 20px;
+  }
+}
+
+/******************************************/
+
+@media (max-width: 768px) {
+  body {
+    padding: 0.1%;
+  }
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav img {
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin-left: -6%;
+  }
+  nav ul li {
+    border-bottom: 2px solid var(--grey-color);
+    padding: 3% 15%;
+    border-top: none;
+  }
+  nav ul li:hover {
+    border-top: 0px;
+    border-bottom: 2px solid var(--blue-color);
+    transition: 0.3s;
+  }
+
+  .one {
+    padding: 3% 5%;
+  }
+
+  .one form .search {
+    display: none;
+  }
+  .one form .search-mobile {
+    display: block;
+  }
+
+  .three {
+    align-items: center;
+    padding: 4.5% 5%;
+  }
+  .three .activites .content .row {
+    flex-direction: column;
+    padding: 0;
+  }
+  .three .activites .content h3 {
+    max-width: 200px;
+    margin-bottom: -3%;
+  }
+
+  .three .activites .content .row .card {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  .three .activites .content .row .card img {
+    width: 100%;
+    height: 240px;
+  }
+
+  footer .content {
+    flex-direction: column;
+  }
+}
