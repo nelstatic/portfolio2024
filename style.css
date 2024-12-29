@@ -13,14 +13,14 @@ body {
   padding: 0 40px;
 
   --blue-color: #23529a;
-  --grey-color: #f2f2f2;
-  --blizzard-color: #deebff;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
+main {
+  position: relative;
+}
 a {
   text-decoration: none;
   color: black;
@@ -34,6 +34,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  padding: 10px 20px;
 }
 
 nav .logo {
@@ -51,15 +55,14 @@ nav ul li {
   padding: 3% 4%;
   border-top: solid transparent 2px;
 }
-nav ul li:hover {
-  border-top: solid var(--blue-color) 2px;
-  transition: 0.3s;
-}
 
 nav ul li a {
   text-decoration: none;
   color: black;
   padding: 23px 0;
+}
+nav ul li a:hover {
+  color: var(--blue-color);
 }
 
 /********************************************************************************************************************************************************/
@@ -74,23 +77,10 @@ nav ul li a {
   padding-bottom: 10px;
 }
 
-.one form {
-  padding: 15px 0;
-  height: 30px;
-  display: flex;
-  align-items: center;
-}
-
-.one form a {
-  font-weight: bold;
-  background: var(--blue-color);
-  color: white;
-  padding: 10px 14px;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  display: block;
+.logo-github {
+  width: 15px;
+  padding: 0 5px;
+  color: var(--blue-color);
 }
 
 /********************************************************************************************************************************************************/
@@ -113,8 +103,8 @@ nav ul li a {
   background: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-  /* max-width: fit-content; */
   width: 300px;
+  cursor: pointer;
 }
 .three .activites .content .row .card img {
   width: 100%;
@@ -128,7 +118,6 @@ nav ul li a {
   padding: 18px 20px;
 }
 
-/* Styles du dialog */
 .dialog {
   border: none;
   border-radius: 8px;
@@ -136,7 +125,11 @@ nav ul li a {
   width: 90%;
   max-width: 400px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
 }
 
 .dialog img {
@@ -153,13 +146,13 @@ nav ul li a {
   margin-top: 1rem;
   text-decoration: none;
   color: #fff;
-  background-color: #03a9f4;
+  background-color: var(--blue-color);
   padding: 0.5rem 1rem;
   border-radius: 5px;
 }
 
 .dialog a:hover {
-  background-color: #0288d1;
+  background-color: var(--blue-color);
 }
 
 .dialog .close-dialog {
